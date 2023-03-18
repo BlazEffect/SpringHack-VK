@@ -28,7 +28,7 @@ import {
   Icon28MessageOutline,
   Icon28NewsfeedOutline,
   Icon28ServicesOutline,
-  Icon28UserCircleOutline, Icon56NewsfeedOutline
+  Icon28UserCircleOutline, Icon56NewsfeedOutline, Icon12Home
 } from "@vkontakte/icons";
 
 const App = () => {
@@ -60,30 +60,37 @@ const App = () => {
       <AdaptivityProvider>
         <AppRoot>
           <SplitLayout popout={popout}>
-            <SplitCol>
+            <SplitLayout>
               <View activePanel={activePanel}>
                 <Home id='home' fetchedUser={fetchedUser} go={go} />
-                <Persik id='persik' go={go} />
               </View>
-            </SplitCol>
+            </SplitLayout>
 
             <SplitCol>
               <Epic
-                  activeStory={activePanel}
-                  tabbar={
-                      viewWidth.tabletMinus && (
-                          <Tabbar className={viewWidth.tabletMinus.className}>
-                            <TabbarItem
-                                onClick={onStoryChange}
-                                selected={activePanel === 'home'}
-                                data-story="home"
-                                text="Новости"
-                            >
-                              <Icon28NewsfeedOutline />
-                            </TabbarItem>
-                          </Tabbar>
-                      )
-                  }
+                activeStory={activePanel}
+                tabbar={
+                  viewWidth.tabletMinus && (
+                    <Tabbar className={viewWidth.tabletMinus.className}>
+                      <TabbarItem
+                        onClick={onStoryChange}
+                        selected={activePanel === 'home'}
+                        data-story="home"
+                        text="Главная"
+                      >
+                        <Icon12Home width={20} height={20} />
+                      </TabbarItem>
+                      <TabbarItem
+                        onClick={onStoryChange}
+                        selected={activePanel === 'home'}
+                        data-story="home"
+                        text="Новости"
+                      >
+                        <Icon28NewsfeedOutline width={20} height={20} />
+                      </TabbarItem>
+                    </Tabbar>
+                  )
+                }
               >
                 <View id="home" activePanel="home">
                   <Panel id="home">
