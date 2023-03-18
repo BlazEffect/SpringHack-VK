@@ -31,9 +31,24 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 const App = () => {
   const [activePanel, setActivePanel] = useState('categories');
+
+  const [section, setSection] = useState(null);
+  const [lesson, setLesson] = useState(null);
+
   const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
   const { viewWidth } = useAdaptivityConditionalRender();
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
+
+  const setActiveSection = ({section}) => {
+    console.log(section);
+    setSection(section);
+    setActivePanel('category');
+  };
+
+  const setActiveLesson = ({lesson}) => {
+    setLesson(lesson);
+    setActivePanel('element');
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -52,7 +67,7 @@ const App = () => {
                 <PanelHeader>Язык жестов</PanelHeader>
 
                 <View activePanel={activePanel}>
-                  <Categories id='categories' />
+                  <Categories id='categories' activeSection={setActiveSection} />
                   <Achievements id='achievements' />
                   <Search id='search' />
                   <Settings id='settings' />

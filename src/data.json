@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Категория 1",
+    "type": "text",
+    "items": [ ],
+    "text": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur consequatur debitis doloremea enim fuga hic, iste obcaecati repudiandae sequi vitae voluptate voluptatibus voluptatum! Aperiam atque officiaquisquam?</div><div>Consequatur cupiditate debitis id illum perferendis, quam. Adipisci beatae blanditiis deleniti, deserunt distinctioeaque earum, error eum eveniet iusto laborum numquam obcaecati omnis quae qui, quia recusandae sequi temporibusveritatis.</div><div>Culpa deleniti deserunt ea est eum ipsum repudiandae sequi. Adipisci ea nobis soluta. Aspernatur cumque distinctioducimus enim in ipsam laboriosam, laudantium recusandae repellat reprehenderit unde, velit vitae. Eaque, saepe.</div><div>Adipisci aspernatur at atque ea eaque esse exercitationem expedita facilis fugiat ipsa magnam, minus necessitatibusnostrum odit officia omnis perferendis possimus quibusdam repellat sunt tempore ullam, veritatis vero voluptatemvoluptatum.</div><div>Animi corporis eaque earum excepturi explicabo, laboriosam molestias mollitia neque nostrum officiis praesentiumprovident qui quos similique tempore vitae voluptas! Deleniti dicta neque nobis non odio quia reiciendis sintvoluptates.</div>",
+    "description": "Первые шаги изучения языка жестов"
+  },
+  {
+    "name": "Категория 2",
+    "type": "section",
+    "items": [
+      {
+        "name": "Жест 1",
+        "path": "../../img/test.png",
+        "description": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem, dicta dolore doloremque ea, enim incidunt,libero nulla odit rerum totam veritatis? Corporis doloribus eum ex molestiae nobis rerum velit.</div><div>Ea fuga quasi tempora. Ab, aliquam aliquid consectetur delectus ipsum nihil possimus provident sed? Accusamus autemcorporis enim excepturi minima mollitia. Ea fugit harum modi. Dicta explicabo perferendis perspiciatis qui?</div>"
+      },
+      {
+        "name": "Жест 2",
+        "path": "../../img/test2.png",
+        "description": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem, dicta dolore doloremque ea, enim incidunt,libero nulla odit rerum totam veritatis? Corporis doloribus eum ex molestiae nobis rerum velit.</div><div>Ea fuga quasi tempora. Ab, aliquam aliquid consectetur delectus ipsum nihil possimus provident sed? Accusamus autemcorporis enim excepturi minima mollitia. Ea fugit harum modi. Dicta explicabo perferendis perspiciatis qui?</div>"
+      }
+    ],
+    "text": "",
+    "description": ""
+  }
+]
