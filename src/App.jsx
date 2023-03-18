@@ -11,7 +11,7 @@ import {
   TabbarItem,
   Tabbar,
   Epic,
-  useAdaptivityConditionalRender,
+  useAdaptivityConditionalRender, Panel, PanelHeader,
 } from '@vkontakte/vkui';
 
 import {
@@ -49,16 +49,20 @@ const App = () => {
         <AppRoot>
           <SplitLayout popout={popout}>
             <SplitCol>
-              <View activePanel={activePanel}>
-                <Home id='home' />
-                <Achievements id='achievements' />
-                <Search id='search' />
-                <Settings id='settings' />
+              <Panel>
+                <PanelHeader>Язык жестов</PanelHeader>
 
-                <Category id='category' />
-                <Categories id='categories' />
-                <Element id='element' />
-              </View>
+                <View activePanel={activePanel}>
+                  <Home id='home' />
+                  <Achievements id='achievements' />
+                  <Search id='search' />
+                  <Settings id='settings' />
+
+                  <Category id='category' />
+                  <Categories id='categories' />
+                  <Element id='element' />
+                </View>
+              </Panel>
 
               <Epic
                 activeStory={activePanel}

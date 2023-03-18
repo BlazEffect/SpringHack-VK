@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import Category from "./Category";
 
 const Element = ({ id }) => (
-  <Panel id={id}>
-    <PanelHeader>Язык жестов</PanelHeader>
-  </Panel>
+  <div>
+
+  </div>
 );
 
 Element.propTypes = {

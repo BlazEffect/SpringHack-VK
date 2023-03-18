@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import Achievements from "./Achievements";
 
 const Categories = ({ id }) => (
-  <Panel id={id}>
-    <PanelHeader>Язык жестов</PanelHeader>
-  </Panel>
+  <div>
+
+  </div>
 );
 
 Categories.propTypes = {

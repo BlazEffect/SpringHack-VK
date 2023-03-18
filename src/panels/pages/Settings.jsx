@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import Search from "./Search";
 
 const Settings = ({ id }) => (
-  <Panel id={id}>
-    <PanelHeader>Язык жестов</PanelHeader>
-  </Panel>
+  <div>
+
+  </div>
 );
 
 Settings.propTypes = {
