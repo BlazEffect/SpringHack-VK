@@ -15,11 +15,13 @@
       {
         "name": "Жест 1",
         "path": "/src/img/persik.png",
+        "id": "lesson_1",
         "description": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem, dicta dolore doloremque ea, enim incidunt,libero nulla odit rerum totam veritatis? Corporis doloribus eum ex molestiae nobis rerum velit.</div><div>Ea fuga quasi tempora. Ab, aliquam aliquid consectetur delectus ipsum nihil possimus provident sed? Accusamus autemcorporis enim excepturi minima mollitia. Ea fugit harum modi. Dicta explicabo perferendis perspiciatis qui?</div>"
       },
       {
         "name": "Жест 2",
         "path": "/img/persik.png",
+        "id": "lesson_2",
         "description": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem, dicta dolore doloremque ea, enim incidunt,libero nulla odit rerum totam veritatis? Corporis doloribus eum ex molestiae nobis rerum velit.</div><div>Ea fuga quasi tempora. Ab, aliquam aliquid consectetur delectus ipsum nihil possimus provident sed? Accusamus autemcorporis enim excepturi minima mollitia. Ea fugit harum modi. Dicta explicabo perferendis perspiciatis qui?</div>"
       }
     ],

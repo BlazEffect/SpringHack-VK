@@ -8,11 +8,14 @@ import {
   Text,
   Title,
   Panel,
+  ContentCard,
   PanelHeader,
   PanelHeaderBack,
+  Button,
   View,
 } from "@vkontakte/vkui";
-import DetailCard from "../pages/DetailCard";
+
+import DetailCategory from "./DetailCategory";
 
 const Categories = () => {
   const [activeSection, setActiveSection] = useState("default");
@@ -24,21 +27,18 @@ const Categories = () => {
             <Panel id="default">
               {data.map((category, i) => {
                 return (
-                  <Fragment key={i}>
-                    <Tappable
-                      marginHeight="50"
-                      onClick={() => setActiveSection(category.section_id)}
-                    >
-                      <Title level="2">{category.name}</Title>
-                      <Text>{category.description}</Text>
-                    </Tappable>
-                  </Fragment>
+                  <ContentCard
+                    key={category.section_id}
+                    header={category.name}
+                    caption={category.description}
+                    onClick={() => setActiveSection(category.section_id)}
+                  />
                 );
               })}
             </Panel>
             {data.map((category, i) => (
               <Panel id={category.section_id} key={i}>
-                <DetailCard category={category} />
+                <DetailCategory returnBack={() => setActiveSection('default')} category={category} />
               </Panel>
             ))}
           </View>

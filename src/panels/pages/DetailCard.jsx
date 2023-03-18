@@ -1,23 +1,15 @@
-import { ContentCard, Title, Panel, CardGrid, Group } from "@vkontakte/vkui";
+import { ContentCard, Group, Title } from "@vkontakte/vkui"
 
-const DetailCard = ({ category }) => {
-  return (
-    <>
-      <Title>{category.name}</Title>
-      {category.text ? (
-        /* есть текст - рендерим только его */
-        <div>{category.text}</div>
-      ) : (
-        <Group style={{marginTop: '20px'}}>
-          <div>
-            {category.items.map((lesson, i) => (
-              <Title style={{marginTop: '15px'}} key={i}>{lesson.name}</Title>
-            ))}
-          </div>
-        </Group>
-      )}
-    </>
-  );
-};
+const DetailCard = ({ lesson }) => (
+    <Group>
+        <ContentCard 
+            header={lesson.name}
+            className="detail-card"
+            /* todo delete hardcode */
+            src={'https://cakeshop.com.ua/images/6eRbfrsEzMM/h:1000/bG9jYWw/6Ly8vY2FrZXNob3AuY29tLnVhL3B1YmxpY19odG1sL3N0b3JhZ2UvYXBwL3B1YmxpYy9pbWcvcHJvZHVjdC85NDc0XzEuanBn'}
+            text={lesson.description}
+        />
+    </Group>
+)
 
-export default DetailCard;
+export default DetailCard

@@ -28,6 +28,7 @@ import Search from "./panels/pages/Search";
 import Element from "./panels/pages/Element";
 
 import '@vkontakte/vkui/dist/vkui.css';
+import './index.css'
 
 const App = () => {
   const [activePanel, setActivePanel] = useState('categories');
