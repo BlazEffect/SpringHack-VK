@@ -31,7 +31,10 @@ const Categories = () => {
           </Panel>
           {data.map((category, i) => (
             <Panel id={category.section_id} key={i}>
-              <DetailCategory returnBack={() => setActiveSection('default')} category={category} />
+              <DetailCategory
+                returnBack={() => setActiveSection("default")}
+                category={category}
+              />
             </Panel>
           ))}
         </View>

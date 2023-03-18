@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 
 import {
   View,
@@ -11,13 +11,17 @@ import {
   TabbarItem,
   Tabbar,
   Epic,
-  useAdaptivityConditionalRender, Panel, PanelHeader,
-} from '@vkontakte/vkui';
+  Progress,
+  useAdaptivityConditionalRender,
+  Panel,
+  PanelHeader,
+} from "@vkontakte/vkui";
 
 import {
   Icon28MoreHorizontalCircleFillGray,
   Icon28SearchOutline,
-  Icon28DiamondOutline, Icon28HomeOutline,
+  Icon28DiamondOutline,
+  Icon28HomeOutline,
 } from "@vkontakte/icons";
 
 import Achievements from "./panels/pages/Achievements";
@@ -25,21 +29,55 @@ import Settings from "./panels/pages/Settings";
 import Categories from "./panels/pages/Categories";
 import Search from "./panels/pages/Search";
 
-import '@vkontakte/vkui/dist/vkui.css';
-import './index.css'
+import "@vkontakte/vkui/dist/vkui.css";
+import "./index.css";
 
 const App = () => {
-  const [activePanel, setActivePanel] = useState('categories');
+  const [activePanel, setActivePanel] = useState("categories");
 
   const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
   const { viewWidth } = useAdaptivityConditionalRender();
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
+
+  const setActiveSection = ({ section }) => {
+    console.log(section);
+    setSection(section);
+    setActivePanel("category");
+  };
+
+  const setActiveLesson = ({ lesson }) => {
+    setLesson(lesson);
+    setActivePanel("element");
+  };
+
+  const getDocHeight = () => {
+    return Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+  }
+
+  const calculateScroll = () => {
+    const scrollTop = window.pageYOffset;
+    const winHeight = window.innerHeight;
+    const docHeight = getDocHeight();
+
+    const totalDocScrollLength = docHeight - winHeight;
+    const scrollPostion = Math.floor((scrollTop / totalDocScrollLength) * 100);
+    setProgressValue(scrollPostion)
+  };
 
   useEffect(() => {
     async function fetchData() {
       setPopout(null);
     }
     fetchData();
+    window.addEventListener("scroll", (e) => {
+      requestAnimationFrame(() => {
+        calculateScroll();
+      });
+    });
   }, []);
 
   return (
@@ -48,14 +86,26 @@ const App = () => {
         <AppRoot>
           <SplitLayout popout={popout}>
             <SplitCol>
-              <Panel>
+              <Panel className="relative mb-0 sm:mb-12">
                 <PanelHeader>Язык жестов</PanelHeader>
-
+                <div className="fixed w-full z-50 bottom-12">
+                  {progressValue ? <Progress value={progressValue} /> : ''}
+                </div>
                 <View activePanel={activePanel}>
                   <Categories id='categories' />
                   <Achievements id='achievements' />
                   <Search id='search' />
                   <Settings id='settings' />
+                  <Categories
+                    id="categories"
+                    activeSection={setActiveSection}
+                  />
+                  <Achievements id="achievements" />
+                  <Search id="search" />
+                  <Settings id="settings" />
+
+                  <Category id="category" />
+                  <Element id="element" />
                 </View>
               </Panel>
 
@@ -66,7 +116,7 @@ const App = () => {
                     <Tabbar className={viewWidth.tabletMinus.className}>
                       <TabbarItem
                         onClick={onStoryChange}
-                        selected={activePanel === 'categories'}
+                        selected={activePanel === "categories"}
                         data-story="categories"
                         text="Главная"
                       >
@@ -74,7 +124,7 @@ const App = () => {
                       </TabbarItem>
                       <TabbarItem
                         onClick={onStoryChange}
-                        selected={activePanel === 'achievements'}
+                        selected={activePanel === "achievements"}
                         data-story="achievements"
                         text="Достижения"
                       >
@@ -83,7 +133,7 @@ const App = () => {
 
                       <TabbarItem
                         onClick={onStoryChange}
-                        selected={activePanel === 'search'}
+                        selected={activePanel === "search"}
                         data-story="search"
                         text="Поиск"
                       >
@@ -92,23 +142,25 @@ const App = () => {
 
                       <TabbarItem
                         onClick={onStoryChange}
-                        selected={activePanel === 'settings'}
+                        selected={activePanel === "settings"}
                         data-story="settings"
                         text="Настройки"
                       >
-                        <Icon28MoreHorizontalCircleFillGray width={20} height={20} />
+                        <Icon28MoreHorizontalCircleFillGray
+                          width={20}
+                          height={20}
+                        />
                       </TabbarItem>
                     </Tabbar>
                   )
                 }
-              >
-              </Epic>
+              ></Epic>
             </SplitCol>
           </SplitLayout>
         </AppRoot>
       </AdaptivityProvider>
     </ConfigProvider>
   );
-}
+};
 
 export default App;
