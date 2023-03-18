@@ -40,7 +40,7 @@ const App = () => {
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
 
   const setActiveSection = ({section}) => {
-    console.log(section);
+    console.log(section)
     setSection(section);
     setActivePanel('category');
   };
