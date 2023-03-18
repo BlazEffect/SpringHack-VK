@@ -1,14 +1,10 @@
 import {
   ContentCard,
-  Title,
   Panel,
-  CardGrid,
-  PanelHeader,
   Group,
-  Button,
   View,
 } from "@vkontakte/vkui";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import DetailCard from "./DetailCard";
 import ButtonBack from '../components/ButtonBack'
@@ -17,7 +13,6 @@ const DetailCategory = ({ category, returnBack }) => {
   const [activePanel, setActivePanel] = useState("default_category");
   const returnToCategory = () => setActivePanel("default_category");
   useEffect(() => {
-    console.log(activePanel);
   }, [activePanel]);
   return (
     <>

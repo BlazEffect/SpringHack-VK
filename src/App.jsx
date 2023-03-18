@@ -22,10 +22,8 @@ import {
 
 import Achievements from "./panels/pages/Achievements";
 import Settings from "./panels/pages/Settings";
-import Category from "./panels/pages/Category";
 import Categories from "./panels/pages/Categories";
 import Search from "./panels/pages/Search";
-import Element from "./panels/pages/Element";
 
 import '@vkontakte/vkui/dist/vkui.css';
 import './index.css'
@@ -33,23 +31,9 @@ import './index.css'
 const App = () => {
   const [activePanel, setActivePanel] = useState('categories');
 
-  const [section, setSection] = useState(null);
-  const [lesson, setLesson] = useState(null);
-
   const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
   const { viewWidth } = useAdaptivityConditionalRender();
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
-
-  const setActiveSection = ({section}) => {
-    console.log(section)
-    setSection(section);
-    setActivePanel('category');
-  };
-
-  const setActiveLesson = ({lesson}) => {
-    setLesson(lesson);
-    setActivePanel('element');
-  };
 
   useEffect(() => {
     async function fetchData() {
@@ -68,13 +52,10 @@ const App = () => {
                 <PanelHeader>Язык жестов</PanelHeader>
 
                 <View activePanel={activePanel}>
-                  <Categories id='categories' activeSection={setActiveSection} />
+                  <Categories id='categories' />
                   <Achievements id='achievements' />
                   <Search id='search' />
                   <Settings id='settings' />
-
-                  <Category id='category' />
-                  <Element id='element' />
                 </View>
               </Panel>
 

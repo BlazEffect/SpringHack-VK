@@ -1,8 +1,8 @@
-import { ContentCard, Group, Title } from "@vkontakte/vkui"
+import { ContentCard, Group } from "@vkontakte/vkui"
 
 const DetailCard = ({ lesson }) => (
     <Group>
-        <ContentCard 
+        <ContentCard
             header={lesson.name}
             className="detail-card"
             /* todo delete hardcode */
@@ -10,6 +10,6 @@ const DetailCard = ({ lesson }) => (
             text={lesson.description}
         />
     </Group>
-)
+);
 
-export default DetailCard
+export default DetailCard;
