@@ -62,6 +62,7 @@ const App = () => {
         <AppRoot>
           <SplitLayout popout={popout}>
             <SplitCol className={viewWidth.tabletPlus.className} fixed width={280} maxWidth={280}>
+            <SplitLayout>
               <View activePanel={activePanel}>
                 <Home id='home'/>
                 <Achievements id='achievements'/>
@@ -118,6 +119,14 @@ const App = () => {
                   )
                 }
               >
+                <View id="home" activePanel="home">
+                  <Panel id="home">
+                    <PanelHeader before={<PanelHeaderBack />}>Новости</PanelHeader>
+                    <Group style={{ height: '1000px' }}>
+                      <Placeholder icon={<Icon56NewsfeedOutline width={56} height={56} />} />
+                    </Group>
+                  </Panel>
+                </View>
               </Epic>
             </SplitCol>
           </SplitLayout>
