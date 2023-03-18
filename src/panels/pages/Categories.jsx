@@ -14,6 +14,7 @@ import {
   Button,
   View,
 } from "@vkontakte/vkui";
+import mainCard from '../../img/main_picture.png'
 
 import DetailCategory from "./DetailCategory";
 
@@ -24,9 +25,11 @@ const Categories = () => {
       <CardGrid size="l">
         <View activePanel={activeSection}>
           <Panel id="default">
+          <img className="mx-auto" src={mainCard} />
             {data.map((category, i) => {
               return (
                 <ContentCard
+                  className="shadow"
                   key={category.section_id}
                   header={category.name}
                   caption={category.description}

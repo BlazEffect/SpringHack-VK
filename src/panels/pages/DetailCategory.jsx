@@ -34,8 +34,8 @@ const DetailCategory = ({ category, returnBack }) => {
           <Panel id="default_category">
             {category.items.map((lesson, i) => (
               <ContentCard
-                className="mb-1"
-                key={i}
+                className="mb-1 shadow"
+                key={lesson.id}
                 header={lesson.name}
                 marginHeight={20}
                 onClick={() => setActivePanel(lesson.id)}
@@ -44,7 +44,7 @@ const DetailCategory = ({ category, returnBack }) => {
             <ButtonBack returnBack={returnBack} />
           </Panel>
           {category.items.map((lesson, i) => (
-            <Panel id={lesson.id}>
+            <Panel id={lesson.id} key={lesson.id}>
               <DetailCard lesson={lesson} />
               <ButtonBack returnBack={returnToCategory} />
             </Panel>

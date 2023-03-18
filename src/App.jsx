@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import bridge from '@vkontakte/vk-bridge';
 
 import {
   View,
@@ -77,6 +78,7 @@ const App = () => {
   useEffect(() => {
     async function fetchData() {
       setPopout(null);
+      await bridge.send('VKWebAppInit')
     }
     fetchData();
     window.addEventListener("scroll", (e) => {
