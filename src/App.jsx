@@ -43,14 +43,14 @@ const App = () => {
           <SplitLayout popout={popout}>
             <SplitCol>
               <View activePanel={activePanel}>
-                <Home id='home'/>
-                <Achievements id='achievements'/>
-                <Search id='search'/>
-                <Settings id='settings'/>
+                <Home id='home' />
+                <Achievements id='achievements' />
+                <Search id='search' />
+                <Settings id='settings' />
 
-                <Category id='category'/>
-                <Categories id='categories'/>
-                <Element id='element'/>
+                <Category id='category' />
+                <Categories id='categories' />
+                <Element id='element' />
               </View>
 
               <Epic
@@ -62,7 +62,6 @@ const App = () => {
                         onClick={onStoryChange}
                         selected={activePanel === 'home'}
                         data-story="home"
-                        text="Главная"
                       >
                         <Icon28HomeOutline width={20} height={20} />
                       </TabbarItem>
@@ -76,19 +75,19 @@ const App = () => {
                       </TabbarItem>
 
                       <TabbarItem
-                          onClick={onStoryChange}
-                          selected={activePanel === 'search'}
-                          data-story="search"
-                          text="Поиск"
+                        onClick={onStoryChange}
+                        selected={activePanel === 'search'}
+                        data-story="search"
+                        text="Поиск"
                       >
                         <Icon28SearchOutline width={20} height={20} />
                       </TabbarItem>
 
                       <TabbarItem
-                          onClick={onStoryChange}
-                          selected={activePanel === 'settings'}
-                          data-story="settings"
-                          text="Настройки"
+                        onClick={onStoryChange}
+                        selected={activePanel === 'settings'}
+                        data-story="settings"
+                        text="Настройки"
                       >
                         <Icon28MoreHorizontalCircleFillGray width={20} height={20} />
                       </TabbarItem>
