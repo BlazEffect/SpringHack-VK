@@ -34,20 +34,15 @@ import "./index.css";
 
 const App = () => {
   const [activePanel, setActivePanel] = useState("categories");
-
+  const [section, setSection] = useState(null);
+  const [progressValue, setProgressValue] = useState(0);
   const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
   const { viewWidth } = useAdaptivityConditionalRender();
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
 
   const setActiveSection = ({ section }) => {
-    console.log(section);
     setSection(section);
     setActivePanel("category");
-  };
-
-  const setActiveLesson = ({ lesson }) => {
-    setLesson(lesson);
-    setActivePanel("element");
   };
 
   const getDocHeight = () => {
@@ -96,16 +91,6 @@ const App = () => {
                   <Achievements id='achievements' />
                   <Search id='search' />
                   <Settings id='settings' />
-                  <Categories
-                    id="categories"
-                    activeSection={setActiveSection}
-                  />
-                  <Achievements id="achievements" />
-                  <Search id="search" />
-                  <Settings id="settings" />
-
-                  <Category id="category" />
-                  <Element id="element" />
                 </View>
               </Panel>
 
