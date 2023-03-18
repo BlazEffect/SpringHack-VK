@@ -27,34 +27,23 @@ import {
 
 import Achievements from "./panels/pages/Achievements";
 import Settings from "./panels/pages/Settings";
-import Category from "./panels/pages/Category";
 import Categories from "./panels/pages/Categories";
 import Search from "./panels/pages/Search";
-import Element from "./panels/pages/Element";
 
 import "@vkontakte/vkui/dist/vkui.css";
 import "./index.css";
 
 const App = () => {
   const [activePanel, setActivePanel] = useState("categories");
-
   const [section, setSection] = useState(null);
-  const [lesson, setLesson] = useState(null);
   const [progressValue, setProgressValue] = useState(0);
-
-  const [popout, setPopout] = useState(<ScreenSpinner size="large" />);
+  const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
   const { viewWidth } = useAdaptivityConditionalRender();
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
 
   const setActiveSection = ({ section }) => {
-    console.log(section);
     setSection(section);
     setActivePanel("category");
-  };
-
-  const setActiveLesson = ({ lesson }) => {
-    setLesson(lesson);
-    setActivePanel("element");
   };
 
   const getDocHeight = () => {
@@ -100,16 +89,10 @@ const App = () => {
                   {progressValue ? <Progress value={progressValue} /> : ''}
                 </div>
                 <View activePanel={activePanel}>
-                  <Categories
-                    id="categories"
-                    activeSection={setActiveSection}
-                  />
-                  <Achievements id="achievements" />
-                  <Search id="search" />
-                  <Settings id="settings" />
-
-                  <Category id="category" />
-                  <Element id="element" />
+                  <Categories id='categories' />
+                  <Achievements id='achievements' />
+                  <Search id='search' />
+                  <Settings id='settings' />
                 </View>
               </Panel>
 

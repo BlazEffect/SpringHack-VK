@@ -1,17 +1,11 @@
 import PropTypes from "prop-types";
 import data from "../../data.json";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import {
   CardGrid,
-  Tappable,
   Group,
-  Text,
-  Title,
   Panel,
   ContentCard,
-  PanelHeader,
-  PanelHeaderBack,
-  Button,
   View,
 } from "@vkontakte/vkui";
 import mainCard from '../../img/main_picture.png'
@@ -50,10 +44,6 @@ const Categories = () => {
       </CardGrid>
     </Group>
   );
-};
-
-Categories.propTypes = {
-  id: PropTypes.string.isRequired,
 };
 
 export default Categories;
