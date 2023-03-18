@@ -1,9 +1,7 @@
 import React from 'react';
-import {Panel, PanelHeader} from "@vkontakte/vkui";
 import PropTypes from "prop-types";
-import Element from "./Element";
 
-const Search = ({ id }) => (
+const Search = () => (
   <div>
 
   </div>

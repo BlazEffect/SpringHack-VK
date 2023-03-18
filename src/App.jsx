@@ -20,7 +20,6 @@ import {
   Icon28DiamondOutline, Icon28HomeOutline,
 } from "@vkontakte/icons";
 
-import Home from './panels/pages/Home';
 import Achievements from "./panels/pages/Achievements";
 import Settings from "./panels/pages/Settings";
 import Category from "./panels/pages/Category";
@@ -31,7 +30,7 @@ import Element from "./panels/pages/Element";
 import '@vkontakte/vkui/dist/vkui.css';
 
 const App = () => {
-  const [activePanel, setActivePanel] = useState('home');
+  const [activePanel, setActivePanel] = useState('categories');
   const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
   const { viewWidth } = useAdaptivityConditionalRender();
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
@@ -53,13 +52,12 @@ const App = () => {
                 <PanelHeader>Язык жестов</PanelHeader>
 
                 <View activePanel={activePanel}>
-                  <Home id='home' />
+                  <Categories id='categories' />
                   <Achievements id='achievements' />
                   <Search id='search' />
                   <Settings id='settings' />
 
                   <Category id='category' />
-                  <Categories id='categories' />
                   <Element id='element' />
                 </View>
               </Panel>
@@ -71,8 +69,8 @@ const App = () => {
                     <Tabbar className={viewWidth.tabletMinus.className}>
                       <TabbarItem
                         onClick={onStoryChange}
-                        selected={activePanel === 'home'}
-                        data-story="home"
+                        selected={activePanel === 'categories'}
+                        data-story="categories"
                         text="Главная"
                       >
                         <Icon28HomeOutline width={20} height={20} />
