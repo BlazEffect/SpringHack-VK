@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
   View,
@@ -36,6 +36,13 @@ const App = () => {
   const { viewWidth } = useAdaptivityConditionalRender();
   const onStoryChange = (e) => setActivePanel(e.currentTarget.dataset.story);
 
+  useEffect(() => {
+    async function fetchData() {
+      setPopout(null);
+    }
+    fetchData();
+  }, []);
+
   return (
     <ConfigProvider>
       <AdaptivityProvider>
@@ -62,6 +69,7 @@ const App = () => {
                         onClick={onStoryChange}
                         selected={activePanel === 'home'}
                         data-story="home"
+                        text="Главная"
                       >
                         <Icon28HomeOutline width={20} height={20} />
                       </TabbarItem>
