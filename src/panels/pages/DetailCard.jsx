@@ -1,19 +1,20 @@
-import { ContentCard, Group, Title } from "@vkontakte/vkui";
-import { Icon12ArrowUpRightOutSquareOutline, Icon24Settings } from "@vkontakte/icons";
+import { ContentCard, Group, Title, Switch, Text } from "@vkontakte/vkui";
+import { Icon12ArrowUpRightOutSquareOutline } from "@vkontakte/icons";
 import { useRef, useEffect, useState } from "react";
 import bridge from "@vkontakte/vk-bridge";
+import videos from "../../Videos";
 
 const DetailCard = ({ lesson }) => {
   const video = useRef();
   const [speed, setSpeed] = useState(1);
-  
-  /* useEffect(() => {
+
+  useEffect(() => {
     video.current.playbackRate = speed;
-  }, [speed]); */
+  }, [speed]);
 
   const changeSpeed = () => {
-    speed === 0.25 ? '' : setSpeed(speed - 0.25);
-  }
+    speed === 1 ? setSpeed(0.5) : setSpeed(1);
+  };
 
   const shareCard = async () => {
     bridge
@@ -30,25 +31,25 @@ const DetailCard = ({ lesson }) => {
         console.log(error);
       });
   };
-  
+
   return (
     <>
-      <div className="flex w-full items-center justify-center relative">
+      <div className="flex flex-col w-full items-center justify-center relative">
         {/*  todo delete hardcode */}
         <video
           loop
           ref={video}
           className="relative"
           autoPlay
-          src={''}
+          src={videos[lesson.path]}
         >
           <source type="video/mp4" />
         </video>
-        
-        <div className="icon absolute -bottom-4 z-20 right-[600px]" onClick={changeSpeed}>
-          <Icon24Settings width={20} height={20}  />
-        </div>
 
+        <div className="icon flex mt-1">
+          <Text>Замедлить видео</Text>
+          <Switch className="ml-4" onClick={changeSpeed} />
+        </div>
       </div>
       <ContentCard
         header={lesson.name}
