@@ -39,9 +39,9 @@ const DetailCard = ({ lesson }) => {
         <video
           loop
           ref={video}
-          className="relative"
+          className="relative video"
           autoPlay
-          src={videos[lesson.path]}
+          src={videos[lesson.video]}
         >
           <source type="video/mp4" />
         </video>
@@ -53,14 +53,16 @@ const DetailCard = ({ lesson }) => {
       </div>
       <ContentCard
         header={lesson.name}
-        className="detail-card shadow"
+        className="detail-card shadow in-card"
         text={lesson.description}
       />
+      {/* 
+      todo: add share i don't know how))
       <Icon12ArrowUpRightOutSquareOutline
         onClick={shareCard}
         width={20}
         height={20}
-      />
+      /> */}
     </>
   );
 };

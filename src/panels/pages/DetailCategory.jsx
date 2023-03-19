@@ -1,5 +1,6 @@
 import {
   ContentCard,
+  CardGrid,
   Panel,
   Group,
   View,
@@ -27,15 +28,17 @@ const DetailCategory = ({ category, returnBack }) => {
       ) : (
         <View activePanel={activePanel}>
           <Panel id="default_category">
-            {category.items.map((lesson, i) => (
-              <ContentCard
-                className="mb-1 shadow"
-                key={lesson.id}
-                header={lesson.name}
-                marginHeight={20}
-                onClick={() => setActivePanel(lesson.id)}
-              />
-            ))}
+            <CardGrid size="l">
+              {category.items.map((lesson, i) => (
+                <ContentCard
+                  className="shadow"
+                  key={lesson.id}
+                  header={lesson.name}
+                  marginHeight={20}
+                  onClick={() => setActivePanel(lesson.id)}
+                />
+              ))}
+            </CardGrid>
             <ButtonBack returnBack={returnBack} />
           </Panel>
           {category.items.map((lesson, i) => (
