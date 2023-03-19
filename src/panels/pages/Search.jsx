@@ -74,11 +74,13 @@ function SearchObjectsByField({ data }) {
           </CardGrid>
         </Panel>
 
-        {filteredObjects.map((lesson) => (
-          <Panel id={lesson.id} key={lesson.id}>
-            <DetailCard lesson={lesson} />
-            <ButtonBack returnBack={() => returnBack()} />
-          </Panel>
+        {filteredObjects.map((obj) => (
+          obj.map((lesson) => (
+            <Panel id={lesson.id} key={lesson.id}>
+              <DetailCard lesson={lesson} />
+              <ButtonBack returnBack={() => returnBack()} />
+            </Panel>
+          ))
         ))}
       </View>
     </div>
