@@ -96,7 +96,7 @@ const DetailTest = ({ test }) => {
                       onChange={(e) => setAnswer(answer.id, e.target.value)}
                       value={option}
                       className="max-w-fit"
-                      name={answer.name}
+                      name={answer.id}
                     >
                       {option}
                     </Radio>
