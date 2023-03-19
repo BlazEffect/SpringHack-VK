@@ -47,13 +47,13 @@ const DetailCard = ({ lesson }) => {
         </video>
 
         <div className="icon flex mt-1">
-          <Text>Замедлить видео</Text>
+          <Text class="text-right">Замедлить видео</Text>
           <Switch className="ml-4" onClick={changeSpeed} />
         </div>
       </div>
       <ContentCard
         header={lesson.name}
-        className="detail-card shadow in-card"
+        className="detail-card shadow in-card mt-3"
         text={lesson.description}
       />
       {/* 

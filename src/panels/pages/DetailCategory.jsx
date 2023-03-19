@@ -28,17 +28,14 @@ const DetailCategory = ({ category, returnBack }) => {
       ) : (
         <View activePanel={activePanel}>
           <Panel id="default_category">
-            <CardGrid size="l">
               {category.items.map((lesson, i) => (
                 <ContentCard
                   className="shadow"
                   key={lesson.id}
                   header={lesson.name}
-                  marginHeight={20}
                   onClick={() => setActivePanel(lesson.id)}
                 />
               ))}
-            </CardGrid>
             <ButtonBack returnBack={returnBack} />
           </Panel>
           {category.items.map((lesson, i) => (

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Проверь свои знания",
+    "description": "Проверка по первому уроку",
+    "id": "firstCategoryTest",
+    "answers": [
+      {
+        "name": "Сколько тебе лет",
+        "video": "firstVideo",
+        "options": ["isfirts", "dasdas", "sadwe"],
+        "id": "firstAnswer",
+        "correct": "isfirts"
+      },
+      {
+        "name": "Возраст",
+        "video": "secondVideo",
+        "options": ["1", "2", "3"],
+        "id": "secondAnswer",
+        "correct": "2"
+      }
+    ],
+    "achivement": {
+        "name": "Лучший мужчина на свете",
+        "answersCount": 2,
+        "id": "bestManOnWorld"
+    }
+  }
+]

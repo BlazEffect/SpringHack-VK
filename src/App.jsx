@@ -19,14 +19,16 @@ import {
 } from "@vkontakte/vkui";
 
 import {
-  Icon28MoreHorizontalCircleFillGray,
   Icon28SearchOutline,
   Icon28DiamondOutline,
   Icon28HomeOutline,
+  Icon28QuestionOutline
 } from "@vkontakte/icons";
 
+
+
 import Achievements from "./panels/pages/Achievements";
-import Settings from "./panels/pages/Settings";
+import Tests from "./panels/pages/Tests";
 import Categories from "./panels/pages/Categories";
 import Search from "./panels/pages/Search";
 
@@ -92,7 +94,7 @@ const App = () => {
                   <Categories id='categories' />
                   <Achievements id='achievements' />
                   <Search id='search' />
-                  <Settings id='settings' />
+                  <Tests id='tests' />
                 </View>
               </Panel>
 
@@ -129,11 +131,11 @@ const App = () => {
 
                       <TabbarItem
                         onClick={onStoryChange}
-                        selected={activePanel === "settings"}
-                        data-story="settings"
-                        text="Настройки"
+                        selected={activePanel === "tests"}
+                        data-story="tests"
+                        text="Тестирование"
                       >
-                        <Icon28MoreHorizontalCircleFillGray
+                        <Icon28QuestionOutline
                           width={20}
                           height={20}
                         />
