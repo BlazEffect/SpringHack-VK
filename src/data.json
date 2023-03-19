@@ -34,43 +34,43 @@
       },
       {
         "name": "Спасибо",
-        "video": "secondVideo",
+        "video": "Video3",
         "id": "lesson_3",
         "description": "Кулаком касаемся подбородка и лба"
       },
       {
         "name": "Знакомиться",
-        "video": "secondVideo",
+        "video": "Video4",
         "id": "lesson_4",
         "description": "Кладём ладонь одной руки в другую - они стали ближе и Познакомились"
       },
       {
-        "name": "Понял",
-        "video": "secondVideo",
+        "name": "Ничего",
+        "video": "Video5",
         "id": "lesson_5",
-        "description": "Указательными пальцами показываем на лог, затем раскрываем ладони"
+        "description": "Вяжем шарф из ничего"
       },
       {
-        "name": "Извини",
-        "video": "secondVideo",
+        "name": "Последний",
+        "video": "Video6",
         "id": "lesson_6",
-        "description": "Стучим пальцами одной руки по ладони другой"
+        "description": "Указываем на локоть - последнюю часть предплечья"
       },
       {
         "name": "Друг, подруга, товарищ",
-        "video": "secondVideo",
+        "video": "Video7",
         "id": "lesson_7",
         "description": "Бьём локтем в бок"
       },
       {
         "name": "Пока, до свидания",
-        "video": "secondVideo",
+        "video": "Video8",
         "id": "lesson_8",
         "description": "Прощаемся - до свидание"
       },
       {
         "name": "Редко",
-        "video": "secondVideo",
+        "video": "Video9",
         "id": "lesson_9",
         "description": "Кто редко печатает на клавиатуре делают это только двумя пальцами"
       }
@@ -85,55 +85,55 @@
     "items": [
       {
         "name": "Люди",
-        "video": "firstVideo",
+        "video": "Video10",
         "id": "lesson_10",
         "description": "Жесты Человек, Человек, Человек"
       },
       {
         "name": "Народ",
-        "video": "secondVideo",
+        "video": "Video11",
         "id": "lesson_11",
         "description": "Если представить что один палец - человек, то десять пальцев народ"
       },
       {
-        "name": "Дети",
-        "video": "secondVideo",
+        "name": "Ребёнок",
+        "video": "Video12",
         "id": "lesson_12",
-        "description": "Гладим детей по голове"
+        "description": "Держим Ребёнка в руках и гладим по голове"
       },
       {
         "name": "Мальчик",
-        "video": "secondVideo",
+        "video": "Video13",
         "id": "lesson_13",
         "description": "Ребром ладони касаемся лба"
       },
       {
         "name": "Девочка",
-        "video": "secondVideo",
+        "video": "Video14",
         "id": "lesson_14",
         "description": "Ребром ладони касаемся подбородка"
       },
       {
         "name": "Подросток",
-        "video": "secondVideo",
+        "video": "Video15",
         "id": "lesson_15",
         "description": "Касаемся кулаком подбородка"
       },
       {
         "name": "Мужчина",
-        "video": "secondVideo",
+        "video": "Video16",
         "id": "lesson_16",
         "description": "Мужчина крутит ус"
       },
       {
         "name": "Женщина",
-        "video": "secondVideo",
+        "video": "Video17",
         "id": "lesson_17",
         "description": "Женщина с гладкими щеками"
       },
       {
         "name": "Семья",
-        "video": "secondVideo",
+        "video": "Video18",
         "id": "lesson_18",
         "description": "В кругу семьи"
       }
