@@ -5,23 +5,37 @@
     "id": "firstCategoryTest",
     "answers": [
       {
-        "name": "Сколько тебе лет",
+        "name": "Выберите правильный вариант жеста",
         "video": "firstVideo",
-        "options": ["isfirts", "dasdas", "sadwe"],
+        "options": ["Я, мне", "Женщина", "Девочка"],
         "id": "firstAnswer",
-        "correct": "isfirts"
+        "correct": "Я, мне"
       },
       {
-        "name": "Возраст",
-        "video": "secondVideo",
-        "options": ["1", "2", "3"],
+        "name": "",
+        "video": "Video8",
+        "options": ["Пока, до свидания", "Знакомиться", "Редко"],
         "id": "secondAnswer",
-        "correct": "2"
+        "correct": "Пока, до свидания"
+      },
+      {
+        "name": "",
+        "video": "Video12",
+        "options": ["Ребёнок", "Ты", "Народ"],
+        "id": "Answer3",
+        "correct": "Ребёнок"
+      },
+      {
+        "name": "",
+        "video": "Video3",
+        "options": ["Спасибо", "Люди", "Семья"],
+        "id": "Answer4",
+        "correct": "Спасибо"
       }
     ],
     "achivement": {
         "name": "Лучший мужчина на свете",
-        "answersCount": 2,
+        "answersCount": 4,
         "id": "bestManOnWorld"
     }
   }
