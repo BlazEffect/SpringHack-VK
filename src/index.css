@@ -27,5 +27,7 @@
 .vkuiModalRoot {
     position: fixed;
     top: 0;
-    left: -170px;
+    transform: translate(-50%, -50%);
+    right: 50%;
+    left: 50%;
 }
