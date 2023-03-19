@@ -10,14 +10,16 @@ import {
   FormItem,
   Button,
   Radio,
-  Text
+  Text, ModalCard, ModalRoot
 } from "@vkontakte/vkui";
 import videos from "../../Videos";
 import Modal from "../components/Modal";
+import {Icon56GiftOutline} from "@vkontakte/icons";
 
 const DetailTest = ({ test }) => {
   const [inputAnswers, setInputAnswers] = useState({});
   const [openModal, setOpenModal] = useState(false);
+  const [correctTest, setCorrectTest] = useState(null);
 
   const setAnswer = (id, value) => {
     const answer = test.answers.find((item) => item.id === id);
@@ -40,17 +42,19 @@ const DetailTest = ({ test }) => {
         if(JSON.parse(achives)[achivement.id]) {
           return;
         }
-        setOpenModal(true);
         achives = { ...JSON.parse(achives), [achivement.id]: true };
         localStorage.setItem("achivement", JSON.stringify(achives));
         return;
       }
-
+      setOpenModal(true);
       localStorage.setItem(
         "achivement",
         JSON.stringify({ [achivement.id]: true })
       );
+      return;
     }
+
+    setCorrectTest(false);
   }
 
   useEffect(() => {
@@ -117,6 +121,16 @@ const DetailTest = ({ test }) => {
           text={test.achivement.name}
           onClose={() => setOpenModal(false)}
         />
+      )}
+      {correctTest === false && (
+        <ModalRoot activeModal='modalTest'>
+          <ModalCard id="modalTest"
+                     header="Тест не пройден"
+                     subheader="К сожалению у вас не получилось пройти тест, попробуйте снова"
+                     onClose={() => setCorrectTest(null)}
+          >
+          </ModalCard>
+        </ModalRoot>
       )}
     </>
   );
