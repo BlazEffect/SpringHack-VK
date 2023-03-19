@@ -19,7 +19,7 @@ const DetailCard = ({ lesson }) => {
   const shareCard = async () => {
     bridge
       .send("VKWebAppShare", {
-        link: "https://vk.com/vkappsdev",
+        link: "https://vk.com/app51584191",
       })
       .then((data) => {
         if (data.result) {
@@ -49,6 +49,13 @@ const DetailCard = ({ lesson }) => {
         <div className="icon flex mt-1">
           <Text className="text-right">Замедлить видео</Text>
           <Switch className="ml-4" onClick={changeSpeed} />
+
+          {/*todo: add share i don't know how))*/}
+          <Icon12ArrowUpRightOutSquareOutline
+            onClick={shareCard}
+            width={20}
+            height={20}
+          />
         </div>
       </div>
       <ContentCard
@@ -56,13 +63,6 @@ const DetailCard = ({ lesson }) => {
         className="detail-card shadow in-card mt-3"
         text={lesson.description}
       />
-      {/* 
-      todo: add share i don't know how))
-      <Icon12ArrowUpRightOutSquareOutline
-        onClick={shareCard}
-        width={20}
-        height={20}
-      /> */}
     </>
   );
 };
