@@ -47,7 +47,7 @@ const DetailCard = ({ lesson }) => {
         </video>
 
         <div className="icon flex mt-1">
-          <Text class="text-right">Замедлить видео</Text>
+          <Text className="text-right">Замедлить видео</Text>
           <Switch className="ml-4" onClick={changeSpeed} />
         </div>
       </div>

@@ -77,9 +77,17 @@ const App = () => {
         calculateScroll();
       });
     });
+    const isFetched = localStorage.getItem('fetchOnce');
+    if(isFetched) {
+      return
+    } else {
+      fetchOnce()
+      localStorage.setItem('fetchOnce', true)
+    }
   }, []);
 
-  /*bridge.send('VKWebAppShowSlidesSheet', {
+  function fetchOnce() {
+    bridge.send('VKWebAppShowSlidesSheet', {
     slides: [
       {
         media: {
@@ -130,7 +138,8 @@ const App = () => {
     .catch((error) => {
       // Ошибка
       console.log(error);
-    });*/
+    });
+  }
 
   return (
     <ConfigProvider>
