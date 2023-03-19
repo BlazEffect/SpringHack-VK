@@ -1,28 +1,141 @@
 [
   {
-    "name": "Категория 1",
+    "name": "Введение",
     "type": "text",
     "section_id": "category1",
     "items": [ ],
-    "text": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur consequatur debitis doloremea enim fuga hic, iste obcaecati repudiandae sequi vitae voluptate voluptatibus voluptatum! Aperiam atque officiaquisquam?</div><div>Consequatur cupiditate debitis id illum perferendis, quam. Adipisci beatae blanditiis deleniti, deserunt distinctioeaque earum, error eum eveniet iusto laborum numquam obcaecati omnis quae qui, quia recusandae sequi temporibusveritatis.</div><div>Culpa deleniti deserunt ea est eum ipsum repudiandae sequi. Adipisci ea nobis soluta. Aspernatur cumque distinctioducimus enim in ipsam laboriosam, laudantium recusandae repellat reprehenderit unde, velit vitae. Eaque, saepe.</div><div>Adipisci aspernatur at atque ea eaque esse exercitationem expedita facilis fugiat ipsa magnam, minus necessitatibusnostrum odit officia omnis perferendis possimus quibusdam repellat sunt tempore ullam, veritatis vero voluptatemvoluptatum.</div><div>Animi corporis eaque earum excepturi explicabo, laboriosam molestias mollitia neque nostrum officiis praesentiumprovident qui quos similique tempore vitae voluptas! Deleniti dicta neque nobis non odio quia reiciendis sintvoluptates.</div>",
+    "text": "Русский жестовый язык (РЖЯ) - национальная лингвистическая система, обладающая собственной лексикой и грамматикой, используемая для общения глухих и слабослышащих, живущих в России, а также на территории СНГ (Украина,\n\nБеларусь, Казахстан). Грамматика русского жестового языка сильно отличается от грамматики русского словесного языка: поскольку слова сложнее\n\nпреобразовывать, то грамматика (например, порядок и образование слов) более строгая, чем в русском языке. Вероятно, принадлежит к семье\n\nфранцузской жестовой речи, близок к амслену (американский жестовый язык), много лексики взято из австрийского жестового языка.\n\nСледует отличать самостоятельный жестовый язык, во-первых, от жестовой азбуки (дактиль), в которой жесты выражают буквы, а не понятия; во-вторых, от калькирующей жестовой речи (полностью идентичной русскому языку).\n\nИз-за недостаточного количества регулирующих организаций русский жестовый язык разделен на\n\nмножество диалектов.\n\nКалькирующая жестовая речь (КЖР) - это система общения, в которой жесты сопровождают устную речь говорящего. Жесты в КЖР выступают как эквиваленты слов, а порядок их следования соответствует расположению слов в обычном предложении.\n\nУ КЖР нет собственной грамматики, она калькирует структуру словесного языка, поэтому является вторичной знаковой системой. Именно в этом принципиальное отличие КЖР от русской жестовой речи.\n\nИнформация взята и переработана со статьи на сайте Википедия\n\nРусский жестовый язык",
     "description": "Первые шаги изучения языка жестов"
   },
   {
-    "name": "Категория 2",
-    "type": "section",
+    "name": "Дактиль",
+    "type": "text",
     "section_id": "category2",
+    "items": [ ],
+    "text": "Русская дактильная азбука (также дактилология) - вспомогательная система русского жестового языка, в которой каждому жесту одной руки (обычно неподвижной правой, согнутой в локте) соответствует буква русского языка; многие знаки внешне похожи на соответствующие буквы русского алфавита. Проговаривание ведётся по правилам русской орфографии.\n\nДактилология отличается от обычных жестов, означающих понятие или комплекс понятий. Используется для проговаривания вспомогательных слов (<a>, <ну», «бы», «Эх»), слов, у которых отсутствует жестовое представление («дефрагментация», «геном», топонимов и личных имён), а также в случае, если нужно прояснить значение того или иного слова.\n\nПравила использования русской Дактильной азбуки таковы: дактилирование производится плавно и слитно обращённой к собеседнику кистью правой руки, которая согнута в локте, в соответствии с правилами орфографии, проговаривая дактилируемые слова и смотря на собеседника. Слова разделяются паузой, а фразы остановкой. Кисть - при дактилировании перемещается влево. В случае ошибки заново дактилируется слово с начала.\n\nИнформация взята и переработана со статьи на сайте Википедия Русская дактильная азбука под лицензией Creative Commons",
+    "description": "Первые шаги изучения языка жестов"
+  },
+  {
+    "name": "Знакомства",
+    "type": "section",
+    "section_id": "category3",
     "items": [
       {
-        "name": "Жест 1",
+        "name": "Я, мне",
         "video": "firstVideo",
         "id": "lesson_1",
-        "description": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem, dicta dolore doloremque ea, enim incidunt,libero nulla odit rerum totam veritatis? Corporis doloribus eum ex molestiae nobis rerum velit.</div><div>Ea fuga quasi tempora. Ab, aliquam aliquid consectetur delectus ipsum nihil possimus provident sed? Accusamus autemcorporis enim excepturi minima mollitia. Ea fugit harum modi. Dicta explicabo perferendis perspiciatis qui?</div>"
+        "description": "Указываем пальцем на себя"
       },
       {
-        "name": "Жест 2",
+        "name": "Ты",
         "video": "secondVideo",
         "id": "lesson_2",
-        "description": "<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem, dicta dolore doloremque ea, enim incidunt,libero nulla odit rerum totam veritatis? Corporis doloribus eum ex molestiae nobis rerum velit.</div><div>Ea fuga quasi tempora. Ab, aliquam aliquid consectetur delectus ipsum nihil possimus provident sed? Accusamus autemcorporis enim excepturi minima mollitia. Ea fugit harum modi. Dicta explicabo perferendis perspiciatis qui?</div>"
+        "description": "Указываем пальцем на собеседника"
+      },
+      {
+        "name": "Спасибо",
+        "video": "secondVideo",
+        "id": "lesson_3",
+        "description": "Кулаком касаемся подбородка и лба"
+      },
+      {
+        "name": "Знакомиться",
+        "video": "secondVideo",
+        "id": "lesson_4",
+        "description": "Кладём ладонь одной руки в другую - они стали ближе и Познакомились"
+      },
+      {
+        "name": "Понял",
+        "video": "secondVideo",
+        "id": "lesson_5",
+        "description": "Указательными пальцами показываем на лог, затем раскрываем ладони"
+      },
+      {
+        "name": "Извини",
+        "video": "secondVideo",
+        "id": "lesson_6",
+        "description": "Стучим пальцами одной руки по ладони другой"
+      },
+      {
+        "name": "Друг, подруга, товарищ",
+        "video": "secondVideo",
+        "id": "lesson_7",
+        "description": "Бьём локтем в бок"
+      },
+      {
+        "name": "Пока, до свидания",
+        "video": "secondVideo",
+        "id": "lesson_8",
+        "description": "Прощаемся - до свидание"
+      },
+      {
+        "name": "Редко",
+        "video": "secondVideo",
+        "id": "lesson_9",
+        "description": "Кто редко печатает на клавиатуре делают это только двумя пальцами"
+      }
+    ],
+    "text": "",
+    "description": ""
+  },
+  {
+    "name": "Родство, семья",
+    "type": "section",
+    "section_id": "category4",
+    "items": [
+      {
+        "name": "Люди",
+        "video": "firstVideo",
+        "id": "lesson_10",
+        "description": "Жесты Человек, Человек, Человек"
+      },
+      {
+        "name": "Народ",
+        "video": "secondVideo",
+        "id": "lesson_11",
+        "description": "Если представить что один палец - человек, то десять пальцев народ"
+      },
+      {
+        "name": "Дети",
+        "video": "secondVideo",
+        "id": "lesson_12",
+        "description": "Гладим детей по голове"
+      },
+      {
+        "name": "Мальчик",
+        "video": "secondVideo",
+        "id": "lesson_13",
+        "description": "Ребром ладони касаемся лба"
+      },
+      {
+        "name": "Девочка",
+        "video": "secondVideo",
+        "id": "lesson_14",
+        "description": "Ребром ладони касаемся подбородка"
+      },
+      {
+        "name": "Подросток",
+        "video": "secondVideo",
+        "id": "lesson_15",
+        "description": "Касаемся кулаком подбородка"
+      },
+      {
+        "name": "Мужчина",
+        "video": "secondVideo",
+        "id": "lesson_16",
+        "description": "Мужчина крутит ус"
+      },
+      {
+        "name": "Женщина",
+        "video": "secondVideo",
+        "id": "lesson_17",
+        "description": "Женщина с гладкими щеками"
+      },
+      {
+        "name": "Семья",
+        "video": "secondVideo",
+        "id": "lesson_18",
+        "description": "В кругу семьи"
       }
     ],
     "text": "",
