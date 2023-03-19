@@ -1,14 +1,45 @@
-import React from 'react';
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import tests from "../../tests.json";
+import { Group, Header, SimpleCell } from "@vkontakte/vkui";
+import {
+  Icon28CheckCircleFill,
+  Icon28CancelCircleFillRed,
+} from "@vkontakte/icons";
 
-const Achievements = () => (
-  <div>
+const Achievements = () => {
+  const [achivement, setAchivement] = useState(() =>
+    tests.map((test) => test.achivement)
+  );
 
-  </div>
-);
+  const haveAchive = (name) => {
+    const currentAchives = localStorage.getItem("achivement");
 
-Achievements.propTypes = {
-  id: PropTypes.string.isRequired
+    if (currentAchives?.length) {
+      return JSON.parse(currentAchives)[name];
+    }
+    return false;
+  };
+  return (
+    <Group>
+      {achivement.map((achive) => (
+        <SimpleCell
+          id={achive.id}
+          key={achive.id}
+          className={haveAchive(achive.id) ? '' : 'opacity-50'}
+          after={
+            haveAchive(achive.id) ? (
+              <Icon28CheckCircleFill />
+            ) : (
+              <Icon28CancelCircleFillRed />
+            )
+          }
+        >
+          {achive.name}
+        </SimpleCell>
+      ))}
+    </Group>
+  );
 };
 
 export default Achievements;

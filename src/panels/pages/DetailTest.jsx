@@ -10,6 +10,7 @@ import {
   FormItem,
   Button,
   Radio,
+  Text
 } from "@vkontakte/vkui";
 import videos from "../../Videos";
 import Modal from "../components/Modal";
@@ -17,6 +18,7 @@ import Modal from "../components/Modal";
 const DetailTest = ({ test }) => {
   const [inputAnswers, setInputAnswers] = useState({});
   const [openModal, setOpenModal] = useState(false);
+
   const setAnswer = (id, value) => {
     const answer = test.answers.find((item) => item.id === id);
     const active = {
@@ -28,19 +30,26 @@ const DetailTest = ({ test }) => {
 
   function handleSubmit() {
     const achivement = test.achivement;
-    const count = Object.values(inputAnswers).filter(answer => answer.correct)?.length;
-    console.log(count, achivement)
-    if(count === achivement.answersCount) {
-      setOpenModal(true);
-      console.log('')
-      if(localStorage.getItem('achivement')) {
-        let achives = localStorage.getItem('achivement');
-        achives = {...JSON.parse(achives), [achivement.id]: true};
-        /* localStorage.setItem('achivement', achives) */
+    const count = Object.values(inputAnswers).filter(
+      (answer) => answer.correct
+    )?.length;
+
+    if (count === achivement.answersCount) {
+      if (localStorage.getItem("achivement")) {
+        let achives = localStorage.getItem("achivement");
+        if(JSON.parse(achives)[achivement.id]) {
+          return;
+        }
+        setOpenModal(true);
+        achives = { ...JSON.parse(achives), [achivement.id]: true };
+        localStorage.setItem("achivement", JSON.stringify(achives));
         return;
       }
 
-      /* localStorage.setItem('achivement', {[achivement.id]: true}) */
+      localStorage.setItem(
+        "achivement",
+        JSON.stringify({ [achivement.id]: true })
+      );
     }
   }
 
@@ -50,10 +59,10 @@ const DetailTest = ({ test }) => {
   return (
     <>
       <Title className="mx-auto">{test.name}</Title>
-      {test.answers.map((answer) => (
-        <FormLayout onSubmit={handleSubmit}>
+      <FormLayout onSubmit={handleSubmit}>
+        {test.answers.map((answer) => (
           <FormLayoutGroup key={answer.id} className="mt-4">
-            <FormItem className="w-full mx-auto">
+            <FormItem required className="w-full mx-auto">
               <Title level="2" className="text-center">
                 {answer.name}
               </Title>
@@ -92,14 +101,23 @@ const DetailTest = ({ test }) => {
               </RadioGroup>
             </FormItem>
           </FormLayoutGroup>
-        </FormLayout>
-      ))}
-      <div className="w-full flex justify-center items-center">
-        <Button onClick={handleSubmit} className="mt-4 mb-12 lg:mb-0 w-full sm:max-w-[300px]">
-          Отправить
-        </Button>
-      </div>
-      <Modal text={test.achivement.name}  />
+        ))}
+        <FormItem className="w-full flex justify-center items-center">
+          <Button
+            stretched
+            onClick={handleSubmit}
+            className="mt-4 mb-12 lg:mb-0 w-full sm:max-w-[300px]"
+          >
+            Отправить
+          </Button>
+        </FormItem>
+      </FormLayout>
+      {openModal && (
+        <Modal
+          text={test.achivement.name}
+          onClose={() => setOpenModal(false)}
+        />
+      )}
     </>
   );
 };
