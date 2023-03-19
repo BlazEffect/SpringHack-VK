@@ -27,13 +27,15 @@ function SearchObjectsByField({ data }) {
   }, [data]);
 
   function filterObjects(field, value) {
-    const filtered = data.filter((obj) => {
-      console.log(field, value);
-      if (obj.hasOwnProperty(field)) {
-        return obj[field].toLowerCase().includes(value.toLowerCase());
-      }
-      return false;
-    });
+    const filtered = data.map((categories) => (
+      categories.filter((obj) => {
+        if (obj.hasOwnProperty(field)) {
+          return obj[field].toLowerCase().includes(value.toLowerCase());
+        }
+        return false;
+      })
+    ));
+
     setFilteredObjects(filtered);
   }
 
@@ -64,11 +66,14 @@ function SearchObjectsByField({ data }) {
             />
           </FormLayout>
           <CardGrid size="l" className="mt-3">
-            {filteredObjects.map((obj) => (
-              <ContentCard onClick={() => setActivePanel(obj.id)} className="shadow" key={obj.id} header={obj.name} />
+            {filteredObjects.map((categories) => (
+              categories.map((obj) => (
+                <ContentCard onClick={() => setActivePanel(obj.id)} className="shadow" key={obj.id} header={obj.name} />
+              ))
             ))}
           </CardGrid>
         </Panel>
+
         {filteredObjects.map((lesson) => (
           <Panel id={lesson.id} key={lesson.id}>
             <DetailCard lesson={lesson} />
@@ -84,7 +89,7 @@ function Search() {
   const itemsData = data.map((cat) => cat?.items).filter((ar) => ar.length);
   return (
     <>
-      <SearchObjectsByField data={itemsData[0]} />
+      <SearchObjectsByField data={itemsData} />
     </>
   );
 }
