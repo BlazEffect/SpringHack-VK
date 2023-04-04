@@ -85,7 +85,7 @@ const App = () => {
     setPopout(null);
     await bridge.send('VKWebAppInit');
   }
-  
+
   function fetchOnce() {
     bridge.send('VKWebAppShowSlidesSheet', {
       slides: [
@@ -123,17 +123,8 @@ const App = () => {
         },
       ]
     })
-        .then((data) => {
-          if (data.result) {
-            // Слайды показаны
-          }
-        })
-        .catch((error) => {
-          // Ошибка
-          console.log(error);
-        });
   }
-  
+
   useEffect(() => {
     fetchData();
     getBase64Image(MainPicture);
