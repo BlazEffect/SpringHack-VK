@@ -19,7 +19,7 @@
 }
 
 .video {
-    background: url('./img/videoloading.png');
+    background: url('../image/videoloading.png');
     width: 328px;
     height: 240px;
 }

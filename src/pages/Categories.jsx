@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import data from "../../data.json";
+import data from "../data/data.json";
 import { useState } from "react";
 import {
   CardGrid,
@@ -8,7 +8,7 @@ import {
   ContentCard,
   View,
 } from "@vkontakte/vkui";
-import mainCard from '../../img/main_picture.png'
+import mainCard from '../assets/image/main_picture.png'
 
 import DetailCategory from "./DetailCategory";
 

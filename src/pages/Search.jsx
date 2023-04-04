@@ -11,7 +11,7 @@ import {
   Panel,
 } from "@vkontakte/vkui";
 import { Icon16Clear } from "@vkontakte/icons";
-import data from "../../data.json";
+import data from "../data/data.json";
 import DetailCard from "./DetailCard";
 import ButtonBack from "../components/ButtonBack";
 

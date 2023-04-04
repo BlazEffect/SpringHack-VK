@@ -26,15 +26,15 @@ import {
 } from "@vkontakte/icons";
 
 
-import Achievements from "./panels/pages/Achievements";
-import Tests from "./panels/pages/Tests";
-import Categories from "./panels/pages/Categories";
-import Search from "./panels/pages/Search";
+import Achievements from "./pages/Achievements";
+import Tests from "./pages/Tests";
+import Categories from "./pages/Categories";
+import Search from "./pages/Search";
 
-import MainPicture from "./img/main_picture.png";
+import MainPicture from "./assets/image/main_picture.png";
 
 import "@vkontakte/vkui/dist/vkui.css";
-import "./index.css";
+import "./assets/css/index.css";
 
 const App = () => {
   const [activePanel, setActivePanel] = useState("categories");

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import tests from "../../tests.json";
+import tests from "../data/tests.json";
 import { Group, Header, SimpleCell } from "@vkontakte/vkui";
 import {
   Icon28CheckCircleFill,

@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { CardGrid, Button, Group, Panel, ContentCard, View } from "@vkontakte/vkui";
-import mainCard from "../../img/main_picture.png";
-import tests from "../../tests.json";
+import mainCard from "../assets/image/main_picture.png";
+import tests from "../data/tests.json";
 import DetailTest from "./DetailTest";
 
 const Tests = () => {
