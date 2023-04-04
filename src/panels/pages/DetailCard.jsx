@@ -1,10 +1,10 @@
-import { ContentCard, Group, Title, Switch, Text } from "@vkontakte/vkui";
+import { ContentCard, Switch, Text } from "@vkontakte/vkui";
 import { Icon12ArrowUpRightOutSquareOutline } from "@vkontakte/icons";
 import { useRef, useEffect, useState } from "react";
 import bridge from "@vkontakte/vk-bridge";
-import videos from "../../Videos";
 
 const DetailCard = ({ lesson }) => {
+  const videoLessonPath = require('../../videos/' + lesson.video + '.mp4');
   const video = useRef();
   const [speed, setSpeed] = useState(1);
 
@@ -35,13 +35,12 @@ const DetailCard = ({ lesson }) => {
   return (
     <>
       <div className="flex flex-col w-full items-center justify-center relative">
-        {/*  todo delete hardcode */}
         <video
           loop
           ref={video}
           className="relative video"
           autoPlay
-          src={videos[lesson.video]}
+          src={videoLessonPath}
         >
           <source type="video/mp4" />
         </video>
@@ -49,8 +48,7 @@ const DetailCard = ({ lesson }) => {
         <div className="icon flex mt-1">
           <Text className="text-right">Замедлить видео</Text>
           <Switch className="ml-4" onClick={changeSpeed} />
-
-          {/*todo: add share i don't know how))*/}
+          
           <Icon12ArrowUpRightOutSquareOutline
             onClick={shareCard}
             width={20}
